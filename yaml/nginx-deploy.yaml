@@ -6,12 +6,11 @@ metadata:
     type: frontend
 spec:
   replicas: 2
-  selectors:
+  selector:
     matchLabels:
       type: frontend
   template: 
     metadata:
-      name: nginx-pod
       labels:
         type: frontend
     spec:
