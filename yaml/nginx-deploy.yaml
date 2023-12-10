@@ -4,17 +4,17 @@ metadata:
   name: nginx-deploy
   labels:
     type: frontend
-specs:
+spec:
   replicas: 2
   selectors:
     matchLabels:
       type: frontend
-  templates: 
+  template: 
     metadata:
       name: nginx-pod
-    labels:
-      type: frontend
-    specs:
+      labels:
+        type: frontend
+    spec:
       containers:
       - name: nginx-container
         image: nginx
